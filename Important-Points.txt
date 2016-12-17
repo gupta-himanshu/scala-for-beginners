@@ -7,3 +7,7 @@ you might ever need in one “perfectly complete” language, Scala puts the too
 native language support when used.
 
 4. Other languages might have objects and functions as two different concepts, in Scala a function value is an object.
+
+5. Scala is an object-oriented language in pure form: every value is an object and every operation is a method call. 
+For example, when you say 1 + 2 in Scala, you are actually invoking a method named + defined in class Int. 
+You can define methods with operator-like names that clients of your API can then use in operator notation.
