@@ -17,4 +17,11 @@ You can define methods with operator-like names that clients of your API can the
       value of the same status as, say, an integer or a string. You can pass functions as arguments to other functions, 
       return them as results from functions, or store them in variables. You can also define a function inside another
       function, just as you can define an integer value inside a function. And you can define functions without giving 
-      them a name, sprinkling your code with function literals as easily as you might write integer literals like 42 .
+      them a name, sprinkling your code with function literals as easily as you might write integer literals like 42.
+   b, The second main idea of functional programming is that methods should not have any side effects. To see the difference, 
+      consider the implementation of strings in Ruby and Java. In Ruby, a string is an array of characters. Characters in a
+      string can be changed individually. For instance you can change a semicolon character in a string to a period inside 
+      the same string object. In Java and Scala, on the other hand, a string is a sequence of characters in the math-
+      ematical sense. Replacing a character in a string using an expression like s.replace(';', '.') yields a new string 
+      object, which is different from s. Another way of expressing this is that strings are immutable in Java whereas
+      they are mutable in Ruby. So looking at just strings, Java is a functional language, whereas Ruby is not.
