@@ -11,3 +11,10 @@ native language support when used.
 5. Scala is an object-oriented language in pure form: every value is an object and every operation is a method call. 
 For example, when you say 1 + 2 in Scala, you are actually invoking a method named + defined in class Int. 
 You can define methods with operator-like names that clients of your API can then use in operator notation.
+
+6. Functional programming is guided by two main ideas. 
+   a. The first idea is that functions are first-class values. In a functional language, a function is a
+      value of the same status as, say, an integer or a string. You can pass functions as arguments to other functions, 
+      return them as results from functions, or store them in variables. You can also define a function inside another
+      function, just as you can define an integer value inside a function. And you can define functions without giving 
+      them a name, sprinkling your code with function literals as easily as you might write integer literals like 42 .
