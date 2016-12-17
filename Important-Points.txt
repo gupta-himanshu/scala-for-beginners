@@ -1,3 +1,7 @@
 1. Scala is a blend of object-oriented and functional programming concepts in a statically typed language.
+
 2. Scala is designed to be extended and adapted by the people programming in it. Instead of providing all constructs
 you might ever need in one “perfectly complete” language, Scala puts the tools for building such constructs into your hands.
+
+3. We can design and implement abstractions in Scala that address radically new application domains, yet still feel like 
+native language support when used.
