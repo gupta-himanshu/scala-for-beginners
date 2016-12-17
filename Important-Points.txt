@@ -1,0 +1,1 @@
+1. Scala is a blend of object-oriented and functional programming concepts in a statically typed language.
