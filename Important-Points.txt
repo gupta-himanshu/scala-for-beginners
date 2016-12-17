@@ -5,3 +5,5 @@ you might ever need in one “perfectly complete” language, Scala puts the too
 
 3. We can design and implement abstractions in Scala that address radically new application domains, yet still feel like 
 native language support when used.
+
+4. Other languages might have objects and functions as two different concepts, in Scala a function value is an object.
