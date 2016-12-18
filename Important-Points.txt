@@ -40,3 +40,6 @@ the Scala compiler does not infer function parameter types.
 
 10. The equals sign that precedes the body of a function hints that in the functional world view, a function defines 
 an expression that results in a value.
+
+11. Sometimes the Scala compiler will require you to specify the result type of a function. If the function is recursive, then 
+we must explicitly specify the function’s result type.
