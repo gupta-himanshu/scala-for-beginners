@@ -29,3 +29,7 @@ You can define methods with operator-like names that clients of your API can the
 7. Java’s primitive types have corresponding classes in the scala package. For example, scala.Boolean corresponds to Java’s 
 boolean. scala.Float corresponds to Java’s float. And when you compile your Scala code to Java bytecodes, the Scala com-
 piler will use Java’s primitive types where possible to give you the performance benefits of the primitive types.
+
+8. Scala has two kinds of variables, val s and var s. A val is similar to a final variable in Java. Once initialized, 
+a val can never be reassigned. A var , by contrast, is similar to a non-final variable in Java. A var can be reassigned
+throughout its lifetime.
