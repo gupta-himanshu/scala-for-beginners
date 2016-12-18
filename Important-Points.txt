@@ -43,3 +43,6 @@ an expression that results in a value.
 
 11. Sometimes the Scala compiler will require you to specify the result type of a function. If the function is recursive, then 
 we must explicitly specify the function’s result type.
+
+12. Scala’s Unit type is similar to Java’s void type; in fact, every void - returning method in Java is mapped to a Unit -
+returning method in Scala.
