@@ -48,3 +48,11 @@ we must explicitly specify the function’s result type.
 returning method in Scala.
 
 13. Java’s ++i and i++ don’t work in Scala. To increment in Scala, you need to say either i = i + 1 or i += 1.
+
+14. for (arg <- args)
+      println(arg)
+The parentheses after the “ for ” contain arg <- args . 11 To the right of the <- symbol is the familiar args array. 
+To the left of <- is “ arg ”, the name of a val , not a var . (Because it is always a val , you just write “ arg ” by
+itself, not “ val arg ”.) Although arg may seem to be a var , because it will get a new value on each iteration, 
+it really is a val : arg can’t be reassigned inside the body of the for expression. Instead, for each element of the args
+array, a new arg val will be created and initialized to the element value, and the body of the for will be executed.
