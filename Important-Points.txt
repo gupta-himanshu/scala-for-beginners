@@ -46,3 +46,5 @@ we must explicitly specify the function’s result type.
 
 12. Scala’s Unit type is similar to Java’s void type; in fact, every void - returning method in Java is mapped to a Unit -
 returning method in Scala.
+
+13. Java’s ++i and i++ don’t work in Scala. To increment in Scala, you need to say either i = i + 1 or i += 1.
