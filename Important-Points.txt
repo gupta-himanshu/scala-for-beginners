@@ -37,3 +37,6 @@ throughout its lifetime.
 9. Function definitions start with def. The function’s name, in this case max , is followed by a comma-separated list 
 of parameters in parentheses. A type annotation must follow every function parameter, preceded by a colon, because
 the Scala compiler does not infer function parameter types.
+
+10. The equals sign that precedes the body of a function hints that in the functional world view, a function defines 
+an expression that results in a value.
