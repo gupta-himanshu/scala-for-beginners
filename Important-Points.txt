@@ -25,3 +25,7 @@ You can define methods with operator-like names that clients of your API can the
       ematical sense. Replacing a character in a string using an expression like s.replace(';', '.') yields a new string 
       object, which is different from s. Another way of expressing this is that strings are immutable in Java whereas
       they are mutable in Ruby. So looking at just strings, Java is a functional language, whereas Ruby is not.
+
+7. Java’s primitive types have corresponding classes in the scala package. For example, scala.Boolean corresponds to Java’s 
+boolean. scala.Float corresponds to Java’s float. And when you compile your Scala code to Java bytecodes, the Scala com-
+piler will use Java’s primitive types where possible to give you the performance benefits of the primitive types.
