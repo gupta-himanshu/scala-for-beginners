@@ -101,3 +101,8 @@ These three methods are all abstract in class List . They are defined in the sub
 
 21. The Nil object defines an empty list. The `Nil` object inherits from type `List[Nothing]` .Because of covariance, 
 this means that Nil is compatible with every instance of the List type.
+
+22. Class `::`, pronounced “cons” for “construct,” represents non-empty lists. It’s named that way in order to support 
+pattern matching with the infix `::` .You have seen that every infix operation in a pattern is treated as a constructor 
+application of the infix operator to its arguments. So the pattern `x :: xs` is treated as `::(x, xs)` where `::` is a 
+case class.
