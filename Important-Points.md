@@ -202,7 +202,7 @@ indicating the person’s name, whether he or she is male, and his or her childr
                              children: Person*)
     ```
 
-Here’s a list of some sample person s:
+    Here’s a list of some sample person s:
 
     ```
     val lara = Person("Lara", false)
