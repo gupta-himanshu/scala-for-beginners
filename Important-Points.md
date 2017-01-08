@@ -177,13 +177,14 @@ One shortcoming of this program pattern is that it is not tail recursive. Note t
 above occurs inside a :: operation. Therefore each recursive call requires a new stack frame.
 A better alternative is to use a list buffer. List buffers let you accumulate the elements of a list. To do this, 
 you use an operation such as “ buf += elem ”, which appends the element elem at the end of the list buffer buf. Once you
-are done appending elements, you can turn the buffer into a list using the toList operation.
-`ListBuffer` is a class in package scala.collection.mutable . To use the simple name only, you can import ListBuffer 
-from its package:
+are done appending elements, you can turn the buffer into a list using the toList operation. `ListBuffer` is a class 
+in package scala.collection.mutable . To use the simple name only, you can import ListBuffer from its package:
+
     ```
     import scala.collection.mutable.ListBuffer
     ```
 Using a list buffer, the body of incAll can now be written as follows:
+
     ```
     val buf = new ListBuffer[Int]
     for (x <- xs) buf += x + 1
