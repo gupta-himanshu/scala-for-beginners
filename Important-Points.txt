@@ -51,8 +51,17 @@ returning method in Scala.
 
 14. for (arg <- args)
       println(arg)
-The parentheses after the “ for ” contain arg <- args . 11 To the right of the <- symbol is the familiar args array. 
+The parentheses after the “ for ” contain arg <- args .To the right of the <- symbol is the familiar args array. 
 To the left of <- is “ arg ”, the name of a val , not a var . (Because it is always a val , you just write “ arg ” by
 itself, not “ val arg ”.) Although arg may seem to be a var , because it will get a new value on each iteration, 
 it really is a val : arg can’t be reassigned inside the body of the for expression. Instead, for each element of the args
 array, a new arg val will be created and initialized to the element value, and the body of the for will be executed.
+
+15. In Scala, you can instantiate objects, or class instances, using new .When you instantiate an object in Scala, you can 
+parameterize it with values and types. Parameterization means “configuring” an instance when you create it. You parameterize 
+an instance with values by passing objects to a constructor in parentheses. For example, the following Scala code instantiates 
+a new java.math.BigInteger and parameterizes it with the value "12345" : 
+    
+```
+val big = new java.math.BigInteger("12345")
+```
