@@ -66,3 +66,8 @@ a new java.math.BigInteger and parameterizes it with the value "12345" :
 val big = new java.math.BigInteger("12345")
 ```
 16. Arrays in Scala are accessed by placing the index inside parentheses, not square brackets as in Java.
+
+17. When you define a variable with val ,the variable can’t be reassigned, but the object to which it refers could potentially 
+still be changed. So in this case, you couldn’t reassign greetStrings to a different array; greetStrings will always point to the
+same Array[String] instance with which it was initialized. But you can change the elements of that Array[String] over time, 
+so the array itself is mutable.
