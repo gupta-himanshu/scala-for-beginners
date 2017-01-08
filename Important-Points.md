@@ -65,3 +65,4 @@ a new java.math.BigInteger and parameterizes it with the value "12345" :
 ```
 val big = new java.math.BigInteger("12345")
 ```
+16. Arrays in Scala are accessed by placing the index inside parentheses, not square brackets as in Java.
