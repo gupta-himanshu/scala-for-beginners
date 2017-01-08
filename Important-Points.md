@@ -106,3 +106,14 @@ this means that Nil is compatible with every instance of the List type.
 pattern matching with the infix `::` .You have seen that every infix operation in a pattern is treated as a constructor 
 application of the infix operator to its arguments. So the pattern `x :: xs` is treated as `::(x, xs)` where `::` is a 
 case class.
+
+23. The definitions of the head and tail method simply return the corresponding parameter. In fact, this pattern can be 
+abbreviated by letting the parameters directly implement the head and tail methods of the superclass List, as in the 
+following equivalent but shorter definition of the :: class:
+    ```
+    final case class ::[T](head: T, tail: List[T]) extends List[T] {
+      override def isEmpty: Boolean = false
+    }
+    ```
+This works because every case class parameter is implicitly also a field of the class (it’s like the parameter 
+declaration was prefixed with val).
