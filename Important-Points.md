@@ -118,10 +118,10 @@ following equivalent but shorter definition of the :: class:
 This works because every case class parameter is implicitly also a field of the class (it’s like the parameter 
 declaration was prefixed with val).
 
-24. The list construction methods :: and ::: are special. Because they end in a colon, they are bound to their right 
-operand. That is, an operation such as x :: xs is treated as the method call xs.::(x) , not x.::(xs). In fact, x.::(xs) 
+24. The list construction methods `::` and `:::` are special. Because they end in a colon, they are bound to their right 
+operand. That is, an operation such as `x :: xs` is treated as the method call `xs.::(x)` , not `x.::(xs)`. In fact, `x.::(xs)` 
 would not make sense, as x is of the list element type, which can be arbitrary, so we cannot assume that this type would 
-have a :: method. For this reason, the :: method should take an element value and yield a new list. What is the 
+have a `::` method. For this reason, the `::` method should take an element value and yield a new list. What is the 
 required type of the element value? You might be tempted to say it should be the same as the list’s element type, 
 but in fact this is more restrictive than necessary. To see why, consider this class hierarchy:
     ```
