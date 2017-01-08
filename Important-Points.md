@@ -192,3 +192,37 @@ Using a list buffer, the body of incAll can now be written as follows:
     ```
 This is a very efficient way to build lists. In fact, the list buffer implementation is organized so that both the 
 append operation ( += ) and the toList operation take (very short) constant time.
+
+27. Say you are given a list of persons, each defined as an instance of a class Person. Class Person has fields 
+indicating the person’s name, whether he or she is male, and his or her children. Here’s the class definition:
+
+    ```
+    scala> case class Person(name: String,
+                             isMale: Boolean,
+                             children: Person*)
+    ```
+
+Here’s a list of some sample person s:
+
+    ```
+    val lara = Person("Lara", false)
+    val bob = Person("Bob", true)
+    val julie = Person("Julie", false, lara, bob)
+    val persons = List(lara, bob, julie)
+    ```
+Now, say you want to find out the names of all pairs of mothers and their children in that list. Using map, 
+flatMap and filter, you can formulate the following query:
+
+    ```
+    scala> persons filter (p => !p.isMale) flatMap (p =>(p.children map (c => (p.name, c.name))))
+    res0: List[(String, String)] = List((Julie,Lara), (Julie,Bob))
+    ```
+These queries do their job, but they are not exactly trivial to write or understand. Is there a simpler way? 
+In fact, there is. Using a `for` expression, the same example can be written as follows:
+
+   ```
+    scala> for (p <- persons; if !p.isMale; c <- p.children) yield (p.name, c.name)
+    res2: List[(String, String)] = List((Julie,Lara), (Julie,Bob))
+    ```
+
+The result of this expression is exactly the same as the result of the previous expression.
