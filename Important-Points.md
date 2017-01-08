@@ -165,3 +165,29 @@ and `:::` . These infix operations can be expanded to equivalent method calls as
 
     this.:::(prefix.tail).::(prefix.head)
     ```
+26. The typical access pattern for a list is recursive. For instance, to increment every element of a list without using 
+map you could write: 
+    ```
+    def incAll(xs: List[Int]): List[Int] = xs match {
+      case List() => List()
+      case x :: xs1 => x + 1 :: incAll(xs1)
+    }
+    ```
+One shortcoming of this program pattern is that it is not tail recursive. Note that the recursive call to `incAll` 
+above occurs inside a :: operation. Therefore each recursive call requires a new stack frame.
+A better alternative is to use a list buffer. List buffers let you accumulate the elements of a list. To do this, 
+you use an operation such as “ buf += elem ”, which appends the element elem at the end of the list buffer buf. Once you
+are done appending elements, you can turn the buffer into a list using the toList operation.
+`ListBuffer` is a class in package scala.collection.mutable . To use the simple name only, you can import ListBuffer 
+from its package:
+    ```
+    import scala.collection.mutable.ListBuffer
+    ```
+Using a list buffer, the body of incAll can now be written as follows:
+    ```
+    val buf = new ListBuffer[Int]
+    for (x <- xs) buf += x + 1
+    buf.toList
+    ```
+This is a very efficient way to build lists. In fact, the list buffer implementation is organized so that both the 
+append operation ( += ) and the toList operation take (very short) constant time.
