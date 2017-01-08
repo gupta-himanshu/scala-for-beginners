@@ -98,3 +98,6 @@ variable of type List[Any] :
     def tail: List[T]
     ```
 These three methods are all abstract in class List . They are defined in the subobject `Nil` and the subclass `::` . 
+
+21. The Nil object defines an empty list. The `Nil` object inherits from type `List[Nothing]` .Because of covariance, 
+this means that Nil is compatible with every instance of the List type.
