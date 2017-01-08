@@ -141,3 +141,27 @@ The apples value is treated as a List of Apple s, as expected. However, the defi
 still possible to add an element of a different type to that list. The element type of the resulting list is Fruit ,
 which is the most precise common supertype of the original list element type (i.e., Apple ) and the type of the 
 element to be added (i.e., Orange ). This flexibility is obtained by defining the :: method (cons)
+
+25. The list concatenation method `:::` is defined in a similar way to `::`.
+    ```
+    def :::[U >: T](prefix: List[U]): List[U] =
+      if (prefix.isEmpty) this
+      else prefix.head :: prefix.tail ::: this
+    ```
+Like cons, concatenation is polymorphic. The result type is “widened” as necessary to include the types of all 
+list elements. Note again that the order of the arguments is swapped between an infix operation and an explicit
+method call. Because both `:::` and `::` end in a colon, they both bind to the right and are both right associative. 
+For instance, the else part of the definition of `:::` contains infix operations of both `::`
+and `:::` . These infix operations can be expanded to equivalent method calls as follows:
+    ```
+    prefix.head :: prefix.tail ::: this
+    equals (because :: and ::: are right-associative)
+
+    prefix.head :: (prefix.tail ::: this)
+    equals (because :: binds to the right)
+
+    (prefix.tail ::: this).::(prefix.head)
+    equals (because ::: binds to the right)
+
+    this.:::(prefix.tail).::(prefix.head)
+    ```
