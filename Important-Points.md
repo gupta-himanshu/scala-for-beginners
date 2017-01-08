@@ -74,3 +74,19 @@ so the array itself is mutable.
 
 18. Lists are not “built-in” as a language construct in Scala; they are defined by an abstract class List in the scala package, 
 which comes with two sub-classes for `::` and `Nil`.
+
+19. 
+    ```
+    package scala
+    abstract class List[+T] {
+    ```
+List is an abstract class, so you cannot define elements by calling the empty List constructor. For instance the expression 
+“new List” would be illegal. The class has a type parameter T . The + in front of this type parameter specifies that lists 
+are covariant, as discussed in Chapter 19. Because of this property, you can assign a value of type List[Int] to a
+variable of type List[Any] :
+    ```
+    scala> val xs = List(1, 2, 3)
+    xs: List[Int] = List(1, 2, 3)
+    scala> var ys: List[Any] = xs
+    ys: List[Any] = List(1, 2, 3)
+    ```
