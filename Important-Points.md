@@ -71,3 +71,6 @@ a new java.math.BigInteger and parameterizes it with the value "12345" :
 still be changed. So in this case, you couldn’t reassign greetStrings to a different array; greetStrings will always point to the
 same Array[String] instance with which it was initialized. But you can change the elements of that Array[String] over time, 
 so the array itself is mutable.
+
+18. Lists are not “built-in” as a language construct in Scala; they are defined by an abstract class List in the scala package, 
+which comes with two sub-classes for `::` and `Nil`.
