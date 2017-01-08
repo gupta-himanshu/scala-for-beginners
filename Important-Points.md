@@ -75,7 +75,7 @@ so the array itself is mutable.
 18. Lists are not “built-in” as a language construct in Scala; they are defined by an abstract class List in the scala package, 
 which comes with two sub-classes for `::` and `Nil`.
 
-19. 
+19. List:
     ```
     package scala
     abstract class List[+T] {
@@ -90,3 +90,11 @@ variable of type List[Any] :
     scala> var ys: List[Any] = xs
     ys: List[Any] = List(1, 2, 3)
     ```
+
+20. All list operations can be defined in terms of three basic methods:
+    ```
+    def isEmpty: Boolean
+    def head: T
+    def tail: List[T]
+    ```
+These three methods are all abstract in class List . They are defined in the subobject `Nil` and the subclass `::` . 
