@@ -296,3 +296,12 @@ itself in a Some. For example:
       }
     }
     ```
+
+31. An extractor pattern that does not bind any variable returns a boolean— true for success and 
+false for failure. For instance:
+
+    ```
+    object UpperCase {
+      def unapply(s: String): Boolean = s.toUpperCase == s
+    }
+    ```
