@@ -250,3 +250,33 @@ from Scala’s function type, like this:
     ```
     object EMail extends ((String, String) => String) { ... }
     ```
+
+    The unapply method is what turns EMail into an extractor. In a sense, it reverses the construction 
+process of apply . Where apply takes two strings and forms an email address string out of them, unapply 
+takes an email address and returns potentially two strings: the user and the domain of the address. 
+But unapply must also handle the case where the given string is not an email address. That’s why 
+unapply returns an Option -type over pairs of strings. Its result is either Some(user, domain) if the string 
+`str` is an email address with the given user and domain parts, 1 or None, if str is not an email address. 
+Here are some examples:
+
+    ```
+    unapply("John@epfl.ch") equals Some("John", "epfl.ch")
+    unapply("John Doe") equals None
+    ```
+
+    Now, whenever pattern matching encounters a pattern referring to an extractor object, it 
+invokes the extractor’s unapply method on the selector expression. For instance, executing the code:
+
+    ```
+    selectorString match { case EMail(user, domain) => ... }
+    ```
+
+    would lead to the call:
+
+    ```
+    EMail.unapply(selectorString)
+    ```
+
+    As you saw previously, this call to EMail.unapply will return either None or Some(u, d), 
+for some values u for the user part of the address and d for the domain part. In the None case, 
+the pattern does not match, and the system tries another pattern or fails with a MatchError exception.
