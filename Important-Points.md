@@ -226,3 +226,19 @@ indicating the person’s name, whether he or she is male, and his or her childr
     ```
 
     The result of this expression is exactly the same as the result of the previous expression.
+
+28. An extractor in Scala is an object that has a method called unapply as one of its members. The purpose of that 
+unapply method is to match a value and take it apart.
+
+    ```
+    object EMail {
+      // The injection method (optional)
+      def apply(user: String, domain: String) = user + "@" + domain
+
+      // The extraction method (mandatory)
+      def unapply(str: String): Option[(String, String)] = {
+        val parts = str split "@"
+        if (parts.length == 2) Some(parts(0), parts(1)) else None
+      }
+    }
+    ```
