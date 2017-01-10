@@ -242,3 +242,11 @@ unapply method is to match a value and take it apart.
       }
     }
     ```
+    The apply method has the same meaning as always: it turns EMail into an object that can be applied to 
+arguments in parentheses in the same way a method is applied. So you can write `EMail("John", "epfl.ch")`
+to construct the string "John@epfl.ch". To make this more explicit, you could also let EMail inherit 
+from Scala’s function type, like this:
+
+    ```
+    object EMail extends ((String, String) => String) { ... }
+    ```
