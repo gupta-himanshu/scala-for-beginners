@@ -280,3 +280,5 @@ invokes the extractor’s unapply method on the selector expression. For instanc
     As you saw previously, this call to EMail.unapply will return either None or Some(u, d), 
 for some values u for the user part of the address and d for the domain part. In the None case, 
 the pattern does not match, and the system tries another pattern or fails with a MatchError exception.
+
+29. There is no one-tuple in Scala.
