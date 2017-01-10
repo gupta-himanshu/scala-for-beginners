@@ -282,3 +282,17 @@ for some values u for the user part of the address and d for the domain part. In
 the pattern does not match, and the system tries another pattern or fails with a MatchError exception.
 
 29. There is no one-tuple in Scala.
+
+30. To return just one pattern element from an Extractor, the unapply method simply wraps the element 
+itself in a Some. For example:
+
+    ```
+    object Twice {
+      def apply(s: String): String = s + s
+      def unapply(s: String): Option[String] = {
+        val length = s.length / 2
+        val half = s.substring(0, length)
+        if (half == s.substring(length)) Some(half) else None
+      }
+    }
+    ```
