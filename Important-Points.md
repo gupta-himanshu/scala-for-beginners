@@ -316,3 +316,7 @@ equivalents.
 
 35. To increment or decrement numbers using operators like ++ and −− that are available in other 
 languages, but Scala doesn’t have these operators.
+
+36. Although the Scala BigInt and BigDecimal classes are backed by the Java BigInteger
+and BigDecimal classes, they are simpler to use than their Java counterparts. As you can
+see in the examples, they work just like other numeric types, and they’re also mutable.
