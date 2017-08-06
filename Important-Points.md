@@ -305,3 +305,6 @@ false for failure. For instance:
       def unapply(s: String): Boolean = s.toUpperCase == s
     }
     ```
+32. In Scala, all the numeric types are objects, including Byte ,Char ,Double ,Float ,Int ,Long ,and 
+Short. These seven numeric types extend the AnyVal trait, as do the Unit and Boolean classes, 
+which are considered to be “nonnumeric value types.”
