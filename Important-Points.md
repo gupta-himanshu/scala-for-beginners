@@ -313,3 +313,6 @@ which are considered to be “nonnumeric value types.”
 equivalents.
 
 34. Scala doesn’t have checked exceptions.
+
+35. To increment or decrement numbers using operators like ++ and −− that are available in other 
+languages, but Scala doesn’t have these operators.
