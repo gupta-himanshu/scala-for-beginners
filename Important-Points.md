@@ -311,3 +311,5 @@ which are considered to be “nonnumeric value types.”
 
 33. The seven built-in numeric types in Scala have the same data ranges as their Java primitive 
 equivalents.
+
+34. Scala doesn’t have checked exceptions.
