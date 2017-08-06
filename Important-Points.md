@@ -308,3 +308,6 @@ false for failure. For instance:
 32. In Scala, all the numeric types are objects, including Byte ,Char ,Double ,Float ,Int ,Long ,and 
 Short. These seven numeric types extend the AnyVal trait, as do the Unit and Boolean classes, 
 which are considered to be “nonnumeric value types.”
+
+33. The seven built-in numeric types in Scala have the same data ranges as their Java primitive 
+equivalents.
