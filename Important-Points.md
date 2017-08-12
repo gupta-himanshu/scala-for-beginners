@@ -327,3 +327,7 @@ normal if statement to achieve the ternary effect.
 
 38. The try / catch / finally structure is similar to Java, though Scala uses pattern matching
 in the catch clause. This differs from Java.
+
+39. Scala match expression look like a Java switch statement, but because we can match any 
+object, extract information from matched objects, add guards to case statements, return 
+values, and more, match expressions are a major feature of the Scala language.
