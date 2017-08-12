@@ -341,3 +341,15 @@ a new collection, but when we use a for loop without yield, we’re just operati
 each element in the collection—we’re not creating a new collection. 
 The for / yield combination is referred to as a for comprehension, 
 and in its basic use, it works just like the map method.
+
+42. How for loops are translated by the Scala compiler:
+   a. A simple for loop that iterates over a collection is translated to a foreach method
+      call on the collection.
+
+   b. A for loop with a guard is translated to a sequence of a withFilter
+      method call on the collection followed by a foreach call.
+
+   c. A for loop with a yield expression is translated to a map method call on the collection.
+
+   d. A for loop with a yield expression and a guard is translated to a withFilter
+      method call on the collection, followed by a map method call.
