@@ -223,7 +223,7 @@ indicating the person’s name, whether he or she is male, and his or her childr
    ```
     scala> for (p <- persons; if !p.isMale; c <- p.children) yield (p.name, c.name)
     res2: List[(String, String)] = List((Julie,Lara), (Julie,Bob))
-    ```
+   ```
 
     The result of this expression is exactly the same as the result of the previous expression.
 
