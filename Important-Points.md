@@ -369,3 +369,7 @@ and in its basic use, it works just like the map method.
    c. When the loop finishes running, the entire contents of the bucket are returned.
 
 45. Scala doesn’t have `break` or `continue` keywords.
+
+46. `break` and `breakable` aren’t actually keywords; they’re methods in `scala.util.control.Breaks`.
+In Scala 2.10, the `break` method is declared as follows to throw an instance of a `BreakControl` 
+exception when it’s called.
