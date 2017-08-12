@@ -373,3 +373,5 @@ and in its basic use, it works just like the map method.
 46. `break` and `breakable` aren’t actually keywords; they’re methods in `scala.util.control.Breaks`.
 In Scala 2.10, the `break` method is declared as follows to throw an instance of a `BreakControl` 
 exception when it’s called.
+
+47. In Scala there is no special ternary operator.
