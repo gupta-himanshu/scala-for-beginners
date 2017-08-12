@@ -324,3 +324,6 @@ see in the examples, they work just like other numeric types, and they’re also
 37. Scala’s if / then / else structure is similar to Java, but can also be used to return a value. 
 As a result, though Java has a special syntax for a ternary operator, in Scala you just use a 
 normal if statement to achieve the ternary effect.
+
+38. The try / catch / finally structure is similar to Java, though Scala uses pattern matching
+in the catch clause. This differs from Java.
