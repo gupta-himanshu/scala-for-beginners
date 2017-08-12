@@ -68,3 +68,13 @@ In Scala 2.10, the `break` method is declared as follows to throw an instance of
 exception when it’s called.
 
 16. In Scala there is no special ternary operator.
+
+17. following conditions must be true for Scala to apply the `tableswitch` optimization:
+   a. The matched value must be a known integer.
+
+   b. The matched expression must be “simple.” It can’t contain any type checks, if
+      statements, or extractors.
+
+   c. The expression must also have its value available at compile time.
+
+   d. There should be more than two case statements.
