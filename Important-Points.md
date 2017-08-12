@@ -355,3 +355,15 @@ and in its basic use, it works just like the map method.
       method call on the collection, followed by a map method call.
 
 43. Using a for loop with a yield statement is known as a for comprehension.
+
+44. If you’re new to using yield with a for loop, it can help to think of the loop like this:
+   a. When it begins running, the for / yield loop immediately creates a new, empty
+      collection that is of the same type as the input collection. For example, if the input
+      type is a Vector , the output type will also be a Vector . You can think of this new
+      collection as being like a bucket.
+
+   b. On each iteration of the for loop, a new output element is created from the current
+      element of the input collection. When the output element is created, it’s placed in
+      the bucket.
+
+   c. When the loop finishes running, the entire contents of the bucket are returned.
