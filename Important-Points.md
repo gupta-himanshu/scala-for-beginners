@@ -353,3 +353,5 @@ and in its basic use, it works just like the map method.
 
    d. A for loop with a yield expression and a guard is translated to a withFilter
       method call on the collection, followed by a map method call.
+
+43. Using a for loop with a yield statement is known as a for comprehension.
