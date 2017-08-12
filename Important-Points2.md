@@ -78,3 +78,6 @@ exception when it’s called.
    c. The expression must also have its value available at compile time.
 
    d. There should be more than two case statements.
+
+18. It’s important to provide a default match. Failure to do so can cause a `MatchError`.
+
