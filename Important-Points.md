@@ -335,3 +335,9 @@ values, and more, match expressions are a major feature of the Scala language.
 40. scala> 1 to 3
 res0: scala.collection.immutable.Range.Inclusive = Range(1, 2, 3)
 Using a Range like this is known as using a generator.
+
+41. When we use the for / yield combination with a collection, we're building and returning 
+a new collection, but when we use a for loop without yield, we’re just operating on 
+each element in the collection—we’re not creating a new collection. 
+The for / yield combination is referred to as a for comprehension, 
+and in its basic use, it works just like the map method.
