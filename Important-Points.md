@@ -367,3 +367,5 @@ and in its basic use, it works just like the map method.
       the bucket.
 
    c. When the loop finishes running, the entire contents of the bucket are returned.
+
+45. Scala doesn’t have `break` or `continue` keywords.
