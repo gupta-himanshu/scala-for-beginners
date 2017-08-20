@@ -152,3 +152,9 @@ c. Modify the body of the getter and setter methods as desired.
 object-private, which means that it can only be accessed from the object that contains
 it. Unlike private , the field can’t also be accessed by other instances of the same type,
 making it more private than the plain private setting.
+
+33. In Scala there’s no direct way to control which superclass constructor is called from
+an auxiliary constructor in a subclass. In fact, because each auxiliary constructor must
+call a previously defined constructor in the same class, all auxiliary constructors will
+eventually call the same superclass constructor that’s called from the subclass’s primary
+constructor.
