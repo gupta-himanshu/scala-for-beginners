@@ -130,3 +130,6 @@ ion object for the Foo class.
 A companion object has several purposes, and one purpose is that any
 method declared in a companion object will appear to be a static
 method on the object.
+
+29. We can’t override the getter and setter methods Scala generates for you, 
+at least not if you want to stick with the Scala naming conventions.
