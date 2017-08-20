@@ -121,3 +121,12 @@ tor.
 
 27. To make the primary constructor private, insert the private keyword in between the
 class name and any parameters the constructor accepts.
+
+28. A companion object is simply an object that’s defined in the same file
+as a class , where the object and class have the same name. If you
+declare a class named Foo in a file named Foo.scala , and then declare
+an object named Foo in that same file, the Foo object is the compan‐
+ion object for the Foo class.
+A companion object has several purposes, and one purpose is that any
+method declared in a companion object will appear to be a static
+method on the object.
