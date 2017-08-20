@@ -81,3 +81,6 @@ exception when it’s called.
 
 18. It’s important to provide a default match. Failure to do so can cause a `MatchError`.
 
+19. If you’re coming to Scala from Java, you’ll find that the process of declaring a primary
+constructor in Scala is quite different. In Java it’s fairly obvious when you’re in the main
+constructor and when you’re not, but Scala blurs this distinction.
