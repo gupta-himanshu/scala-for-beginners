@@ -133,3 +133,9 @@ method on the object.
 
 29. We can’t override the getter and setter methods Scala generates for you, 
 at least not if you want to stick with the Scala naming conventions.
+
+30. To solve this problem, change the name of the field you use in the class constructor so
+it won’t collide with the name of the getter method you want to use. A common approach
+is to add a leading underscore to the parameter name, so if you want to manually create
+a getter method called name , use the parameter name _name in the constructor, then
+declare your getter and setter methods according to the Scala conventions.
