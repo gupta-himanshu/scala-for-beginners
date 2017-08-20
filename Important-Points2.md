@@ -87,3 +87,15 @@ constructor and when you’re not, but Scala blurs this distinction.
 
 20. In Scala, anything defined within the body of the class other than method declarations 
 is a part of the primary class constructor.
+
+21. the visibility of constructor fields in a Scala class is controlled by whether the fields 
+are declared as val , var , without either val or var , and whether private is also added 
+to the fields.
+
+• If a field is declared as a var , Scala generates both getter and setter methods for that
+field.
+• If the field is a val , Scala generates only a getter method for it.
+• If a field doesn’t have a var or val modifier, Scala gets conservative, and doesn’t
+generate a getter or setter method for the field.
+• Additionally, var and val fields can be modified with the private keyword, which
+prevents getters and setters from being generated.
