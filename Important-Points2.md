@@ -191,3 +191,8 @@ parameters declared as var .
 pressions.
 • equals and hashCode methods are generated.
 • A copy method is generated.
+
+39. The first thing to know about Scala and the equals method is that, unlike Java, you
+compare the equality of two objects with == . In Java, the == operator compares “reference
+equality,” but in Scala, == is a method you use on each class to compare the equality of
+two instances, calling your equals method under the covers.
