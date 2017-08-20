@@ -158,3 +158,7 @@ an auxiliary constructor in a subclass. In fact, because each auxiliary construc
 call a previously defined constructor in the same class, all auxiliary constructors will
 eventually call the same superclass constructor that’s called from the subclass’s primary
 constructor.
+
+34. There are two main reasons to use an abstract class in Scala:
+• You want to create a base class that requires constructor arguments.
+• The code will be called from Java code.
