@@ -106,3 +106,5 @@ mutator methods.
 23. We can add the private keyword to a val or var field. This keyword prevents getter 
 and setter methods from being generated, so the field can only be accessed from 
 within members of the class.
+
+24. Case class constructor parameters are val by default.
