@@ -178,3 +178,16 @@ actually exist in the abstract base class (or trait), the override keyword is no
 
 37. To prevent a concrete val field in an abstract base class from being overridden in a
 subclass, declare the field as a final val.
+
+38. Defining a class as a case class results in a lot of boilerplate code being generated, with
+the following benefits:
+• An apply method is generated, so you don’t need to use the new keyword to create
+a new instance of the class.
+• Accessor methods are generated for the constructor parameters because case class
+constructor parameters are val by default. Mutator methods are also generated for
+parameters declared as var .
+• A good, default toString method is generated.
+• An unapply method is generated, making it easy to use case classes in match ex‐
+pressions.
+• equals and hashCode methods are generated.
+• A copy method is generated.
