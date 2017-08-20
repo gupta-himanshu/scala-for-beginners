@@ -139,3 +139,11 @@ it won’t collide with the name of the getter method you want to use. A common 
 is to add a leading underscore to the parameter name, so if you want to manually create
 a getter method called name , use the parameter name _name in the constructor, then
 declare your getter and setter methods according to the Scala conventions.
+
+31. the recipe for overriding default getter and setter methods is:
+a. Create a private var constructor parameter with a name you want to reference
+from within your class. In the example in the Solution, the field is named _name .
+b. Define getter and setter names that you want other classes to use. In the Solution
+the getter name is name , and the setter name is name_= (which, combined with Scala’s
+syntactic sugar, lets users write p.name = "Jony" ).
+c. Modify the body of the getter and setter methods as desired.
