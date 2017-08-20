@@ -102,3 +102,7 @@ prevents getters and setters from being generated.
 
 22. Scala does not follow the JavaBean naming convention when generating accessor and 
 mutator methods.
+
+23. We can add the private keyword to a val or var field. This keyword prevents getter 
+and setter methods from being generated, so the field can only be accessed from 
+within members of the class.
