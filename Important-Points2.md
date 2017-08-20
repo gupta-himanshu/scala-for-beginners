@@ -108,3 +108,11 @@ and setter methods from being generated, so the field can only be accessed from
 within members of the class.
 
 24. Case class constructor parameters are val by default.
+
+25. Auxiliary Constructors:
+
+• Auxiliary constructors are defined by creating methods named this .
+• Each auxiliary constructor must begin with a call to a previously defined construc‐
+tor.
+• Each constructor must have a different signature.
+• One constructor calls another constructor with the name this .
