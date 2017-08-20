@@ -175,3 +175,6 @@ correspond to the val or var field.
 36. When we provide concrete values for these fields in your concrete
 classes, you must again define your fields to be val or var . Because the fields don’t
 actually exist in the abstract base class (or trait), the override keyword is not necessary.
+
+37. To prevent a concrete val field in an abstract base class from being overridden in a
+subclass, declare the field as a final val.
