@@ -118,3 +118,6 @@ tor.
 • One constructor calls another constructor with the name this .
 
 26. If you want to add new “constructors” to your case class, you write new apply methods.
+
+27. To make the primary constructor private, insert the private keyword in between the
+class name and any parameters the constructor accepts.
