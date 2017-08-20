@@ -116,3 +116,5 @@ within members of the class.
 tor.
 • Each constructor must have a different signature.
 • One constructor calls another constructor with the name this .
+
+26. If you want to add new “constructors” to your case class, you write new apply methods.
