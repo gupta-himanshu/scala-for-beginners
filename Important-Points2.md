@@ -99,3 +99,6 @@ field.
 generate a getter or setter method for the field.
 • Additionally, var and val fields can be modified with the private keyword, which
 prevents getters and setters from being generated.
+
+22. Scala does not follow the JavaBean naming convention when generating accessor and 
+mutator methods.
