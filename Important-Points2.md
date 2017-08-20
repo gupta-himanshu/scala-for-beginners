@@ -171,3 +171,7 @@ field.
 • When you define an abstract field in an abstract class or trait, the Scala compiler
 does not create a field in the resulting code; it only generates the methods that
 correspond to the val or var field.
+
+36. When we provide concrete values for these fields in your concrete
+classes, you must again define your fields to be val or var . Because the fields don’t
+actually exist in the abstract base class (or trait), the override keyword is not necessary.
