@@ -162,3 +162,12 @@ constructor.
 34. There are two main reasons to use an abstract class in Scala:
 • You want to create a base class that requires constructor arguments.
 • The code will be called from Java code.
+
+35. The way abstract fields work in abstract classes (or traits) is
+interesting:
+• An abstract var field results in getter and setter methods being generated for the
+field.
+• An abstract val field results in a getter method being generated for the field.
+• When you define an abstract field in an abstract class or trait, the Scala compiler
+does not create a field in the resulting code; it only generates the methods that
+correspond to the val or var field.
