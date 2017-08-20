@@ -147,3 +147,8 @@ b. Define getter and setter names that you want other classes to use. In the Sol
 the getter name is name , and the setter name is name_= (which, combined with Scala’s
 syntactic sugar, lets users write p.name = "Jony" ).
 c. Modify the body of the getter and setter methods as desired.
+
+32. Defining a field as private[this] takes this privacy a step further, and makes the field
+object-private, which means that it can only be accessed from the object that contains
+it. Unlike private , the field can’t also be accessed by other instances of the same type,
+making it more private than the plain private setting.
